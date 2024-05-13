@@ -76,6 +76,7 @@ runs:
                 # 如果不包含斜杠，则在根目录插入cn
                 $file = "$($env:to)/$path"
             }
+            Write-Output $file
             #$file = $_ -replace $env:from, $env:to;
             New-Item -Path $file -ItemType File -Force;
             $context =@{from_language=$($env:from);to_language=$($env:to);style=$($env:style);rules=$($env:rules)}
