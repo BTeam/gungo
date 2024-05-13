@@ -1,0 +1,25 @@
+name: translate en to zh
+
+on:
+  push:
+    branches: develop
+    paths:
+      - "doc/*.texi"
+
+jobs:
+  job1:
+    name: job1
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: translate
+        #uses: chenxizhang/gpt-translator@v1
+        uses: ./workflow/action.yml
+        with:
+          openai_api_key: ${{secrets.OPENAI_API_KEY}}
+          files: doc/*.texi
+          to_language: zh
+          from_language: en
