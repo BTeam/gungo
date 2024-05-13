@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
       - name: translate
         #uses: chenxizhang/gpt-translator@v1
-        uses: ./gpt-translate.yml
+        uses: ./.github/actions/translate.yml
         with:
           openai_api_key: ${{secrets.OPENAI_API_KEY}}
           files: doc/*.texi
