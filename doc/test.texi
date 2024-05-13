@@ -1,4 +1,4 @@
-Sam test 123.
+Sam test 1234.
 
 If you want to write your own interface to GNU Go, or if you want to
 create a go application using the GNU Go engine, this chapter is of
