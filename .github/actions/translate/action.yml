@@ -71,7 +71,7 @@ runs:
             $env:to = $lang
             if ($_ -match "/") {
                 # 如果包含斜杠，则在第一级子目录插入cn
-                $file = $_ -replace '^(.*?)/', '${1}$($env:to)/'
+                $file = $_ -replace '^(.*?)/', "`${1}/${env:to}/"
             } else {
                 # 如果不包含斜杠，则在根目录插入cn
                 $file = "$($env:to)/$path"
