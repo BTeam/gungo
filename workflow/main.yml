@@ -2,7 +2,7 @@ name: translate en to zh
 
 on:
   push:
-    branches: develop
+    branches: none
     paths:
       - "doc/*.texi"
 
